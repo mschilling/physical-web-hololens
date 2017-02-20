@@ -9,6 +9,14 @@
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 
+### Unity ###
+/Library/
+/Temp/
+/Obj/
+/Build/
+/Builds/
+
+
 # Visual Studio 2015 cache directory
 /.vs/
 
@@ -16,8 +24,6 @@
 ExportedObj/
 .consulo/
 *.csproj
-*.unityproj
-*.sln
 *.suo
 *.tmp
 *.user
