@@ -19,7 +19,7 @@ public class BeaconManager : MonoBehaviour {
     /// <param name="address">Unique bluetooth address</param>
     /// <param name="strength">Signal strength</param>
     /// <param name="output">Eddystone URL</param>
-    void  Update(string address, int strength, string output)
+    void  UpdateBeacon(string address, int strength, string output)
     {
         // If beacon does not exist yet, create a new one
         if(!existInList(address))
