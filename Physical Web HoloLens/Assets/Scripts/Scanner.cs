@@ -90,7 +90,7 @@ public class Scanner : MonoBehaviour {
     /// </summary>
     /// <param name="urlSchemeByte">a byte between 0 and 3</param>
     /// <returns>The corresponding UrlScheme</returns>
-    private String getUrlScheme(byte urlSchemeByte)
+    private string getUrlScheme(byte urlSchemeByte)
     {
         switch(urlSchemeByte)
         {
