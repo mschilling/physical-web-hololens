@@ -2,9 +2,9 @@
     <PropertyGroup>
         <UnityInstallationDir>C:\Program Files\Unity\Editor\</UnityInstallationDir>
         <UnityWSASolutionName>Physical Web HoloLens</UnityWSASolutionName>
-        <UnityWSASolutionDir>C:\Users\Stefan\Documents\physical-web-hololens\Physical Web HoloLens\App\</UnityWSASolutionDir>
+        <UnityWSASolutionDir>C:\Users\Ruben\Documents\physical-web-hololens\Physical Web HoloLens\App\</UnityWSASolutionDir>
         <UnityWSAPlayerDir>C:\Program Files\Unity\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
         <UnityWSAToolsDir>$(UnityWSASolutionDir)Unity\Tools\</UnityWSAToolsDir>
-        <UnityProjectDir>C:\Users\Stefan\Documents\physical-web-hololens\Physical Web HoloLens\</UnityProjectDir>
+        <UnityProjectDir>C:\Users\Ruben\Documents\physical-web-hololens\Physical Web HoloLens\</UnityProjectDir>
     </PropertyGroup>
 </Project>

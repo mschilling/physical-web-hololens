@@ -9,8 +9,8 @@ Physical Web HoloLens.sln: modified
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 GeneratedProjects\UWP\Assembly-CSharp-firstpass\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 Physical Web HoloLens\App.cs: 204EDFFDA5826DAD49AE2CFAA18DFADE
-Physical Web HoloLens\Package.appxmanifest: D600BDC6343A7A15595BE198058C1EA2
-Physical Web HoloLens\Physical Web HoloLens.csproj: 470FC21D67B52F69EA9D34832237B21E
+Physical Web HoloLens\Package.appxmanifest: modified
+Physical Web HoloLens\Physical Web HoloLens.csproj: modified
 Physical Web HoloLens\Physical Web HoloLens.csproj.user: modified
 Physical Web HoloLens\project.json: 1D02BC64BAC0D041019673A1C4C51737
 Physical Web HoloLens\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
@@ -26,12 +26,5 @@ Physical Web HoloLens\bin\x86\Debug\AppX\Assets\Square44x44Logo.targetsize-24_al
 Physical Web HoloLens\bin\x86\Debug\AppX\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
 Physical Web HoloLens\bin\x86\Debug\AppX\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
 Physical Web HoloLens\bin\x86\Debug\AppX\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826
-Physical Web HoloLens\bin\x86\Release\AppX\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
-Physical Web HoloLens\bin\x86\Release\AppX\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
-Physical Web HoloLens\bin\x86\Release\AppX\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
-Physical Web HoloLens\bin\x86\Release\AppX\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
-Physical Web HoloLens\bin\x86\Release\AppX\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
-Physical Web HoloLens\bin\x86\Release\AppX\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
-Physical Web HoloLens\bin\x86\Release\AppX\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826
 Physical Web HoloLens\Properties\AssemblyInfo.cs: 0CFA4602AFDCFF241538E7F9D79A48CF
 Physical Web HoloLens\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826
