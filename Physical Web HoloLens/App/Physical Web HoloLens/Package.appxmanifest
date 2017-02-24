@@ -16,8 +16,8 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PhysicalWebHoloLens.App">
       <uap:VisualElements DisplayName="Physical Web HoloLens" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Physical Web HoloLens" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
-        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="transparent" />
+        <uap:DefaultTile ShortName="Physical Web HoloLens" Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#FFFFFF" />
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="landscape" />
           <uap:Rotation Preference="landscapeFlipped" />
@@ -26,9 +26,8 @@
         </uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
-  </Applications>admin
+  </Applications>
   <Capabilities>
-    <Capability Name="internetClient" />
-    <uap2:Capability Name="spatialPerception" />
+    <DeviceCapability Name="bluetooth" />
   </Capabilities>
 </Package>
