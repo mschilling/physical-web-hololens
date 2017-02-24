@@ -5,10 +5,21 @@ using UnityEngine;
 
 public class BeaconManager : MonoBehaviour {
     List<Beacon> beacons { get; set; }
+    int beaconInRange = 60;
+    int beaconStrengthNumersInAverage = 3;
 
 	// Use this for initialization
 	void Start () {
         beacons = new List<Beacon>();
+    }
+
+    void Update ()
+    {
+        Beacon foundBeaconInRange = closeToBeacon();
+        if(foundBeaconInRange != null)
+        {
+            System.Diagnostics.Debug.WriteLine("BeaconInRange: " + foundBeaconInRange.getAddress());
+        }
     }
 
     /// <summary>
@@ -19,17 +30,19 @@ public class BeaconManager : MonoBehaviour {
     /// <param name="address">Unique bluetooth address</param>
     /// <param name="strength">Signal strength</param>
     /// <param name="output">Eddystone URL</param>
-    void  UpdateBeacon(string address, int strength, string output)
+    public void UpdateBeacon(ulong address, int strength, string output)
     {
         // If beacon does not exist yet, create a new one
         if(!existInList(address))
         {                                      
             Beacon beacon = new Beacon(address, strength, output);
             beacons.Add(beacon);
+            System.Diagnostics.Debug.WriteLine("Added Beacon: " + address);
         } else // Beacon already exists. Add an updated strength value to it
         {
             Beacon beacon = getBeacon(address);
             beacon.addStrength(strength);
+            System.Diagnostics.Debug.WriteLine("Updated Beacon: " + address);
         }
     }
 
@@ -38,11 +51,11 @@ public class BeaconManager : MonoBehaviour {
     /// </summary>
     /// <param name="address">Unique bluetooth address</param>
     /// <returns>If the beacon already exists in the list of beacons</returns>
-    bool existInList(string address)
+    bool existInList(ulong address)
     {
         foreach(Beacon beacon in beacons)
         {
-            if (beacon.getAddress().Equals(address))
+            if (beacon.getAddress() == address)
             {
                 return true;
             }
@@ -57,16 +70,28 @@ public class BeaconManager : MonoBehaviour {
     /// </summary>
     /// <param name="address">Unique bluetooth address</param>
     /// <returns>Beacon data that belongs to the given address else null</returns>
-    Beacon getBeacon(string address)
+    Beacon getBeacon(ulong address)
     {
         foreach (Beacon beacon in beacons)
         {
-            if (beacon.getAddress().Equals(address))
+            if (beacon.getAddress() == address)
             {
                 return beacon;
             }
         }
 
+        return null;
+    }
+
+    Beacon closeToBeacon()
+    {
+        foreach (Beacon beacon in beacons)
+        {
+            if (beacon.getStrength(beaconStrengthNumersInAverage) <= beaconInRange)
+            {
+                return beacon;
+            }
+        }
         return null;
     }
 }

@@ -8,6 +8,7 @@ using Windows.Devices.Bluetooth.Advertisement;
 #endif
 
 public class Scanner : MonoBehaviour {
+     public BeaconManager beaconManager;
 
     // Use this for initialization
     void Start () {
@@ -46,8 +47,12 @@ public class Scanner : MonoBehaviour {
         System.Diagnostics.Debug.WriteLine("LocalName: " + eventArgs.Advertisement.LocalName);
         System.Diagnostics.Debug.WriteLine("Uuids: " + eventArgs.Advertisement.ServiceUuids[0]);
 
-        // Create a string variable to store the output
-        string output = "";
+        // Create variables to store the beacon values
+        ulong address = 0;
+        int strength = 0;
+        string output = null;
+
+        address = eventArgs.BluetoothAddress;
 
         // Loop through all DataSections
         foreach (BluetoothLEAdvertisementDataSection data in eventArgs.Advertisement.DataSections)
@@ -64,6 +69,8 @@ public class Scanner : MonoBehaviour {
                 // Byte 2 is the frame identifier
                 // Byte 3 is the transmission power 
                 // Get the Url Scheme from the 4th byte in the array
+                strength = fileContent[3];
+
                 byte urlSchemeByte = fileContent[4];
                 output += getUrlScheme(urlSchemeByte);
 
@@ -81,6 +88,11 @@ public class Scanner : MonoBehaviour {
 
         // Log the beacon output
         System.Diagnostics.Debug.WriteLine("Output: " + output);
+
+        Logger("Address:" + address);
+        Logger("Strength:" + strength);
+        Logger("Output:" + output);
+        beaconManager.UpdateBeacon(address, strength, output);
     }
 #endif
 
@@ -100,5 +112,10 @@ public class Scanner : MonoBehaviour {
             case 3: return "https://";
             default: return "http://";
         }
+    }
+
+    private void Logger(string log)
+    {
+        System.Diagnostics.Debug.WriteLine(log);
     }
 }
